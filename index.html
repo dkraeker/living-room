@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Living Room WebVR Website Experience A-Frame</title>
+<meta name="author" content="Donovan Kraeker">
+<meta name="description" content="Living Room WebVR virtual reality example website experience using A-Frame designed by Donovan Kraeker">
+<script src="aframe.min.js"></script>
+</head>
+<body>  
+<a-scene>
+
+<a-entity geometry="primitive: plane; height: 14; width: 22" position="-21 3.3 2" rotation="0 90 0"  material="shader: flat; 
+src: url(images/outside.jpg)"></a-entity>
+<a-entity geometry="primitive: plane; height: 14; width: 22" position="21 3.3 2" rotation="0 -90 0"  material="shader: flat; 
+src: url(images/outside3.jpg)"></a-entity>
+
+<!-- Table -->
+<a-entity geometry="primitive: box; depth: 1.6; height: 0.1; width: 6" position="0 0.55 1.1" material="shader: flat; 
+src: url(images/table.jpg)">
+ <a-entity geometry="primitive: box; depth: 1.6; height: 1; width: 0.2" position="2.9 -0.55 -0" material="shader: flat;
+src: url(images/table.jpg)"></a-entity>
+ <a-entity geometry="primitive: box; depth: 1.6; height: 1; width: 0.2" position="-2.9 -0.55 -0" material="shader: flat; 
+src: url(images/table.jpg)"></a-entity>
+<!-- Table Items -->
+ <a-entity geometry="primitive: plane; height: 0.8; width: 0.6" position="0.8 0.1 0" rotation="-90 10 0"  material="shader: flat; side: double; 
+src: url(images/magazine.jpg)"></a-entity>
+ <a-entity geometry="primitive: plane; height: 0.5; width: 0.4" position="1.6 0.08 0.2" rotation="-90 -20 0"  material="shader: flat; side: double; src: url(images/snow-crash.jpg)"></a-entity>
+ <a-entity geometry="primitive: box; depth: 0.05; height: 0.5; width: 0.01" position="1.417 0.06 0.13" rotation="90 -20 180"  material="shader: flat; side: double; src: url(images/snow-crash-side.jpg)"></a-entity>
+ <a-entity geometry="primitive: box; depth: 0.5; height: 0.03; width: 0.4" position="1.6 0.06 0.2" rotation="0 -20 0"  material="shader: flat; side: double; color:#fff"></a-entity>
+</a-entity>
+
+<!-- Floor -->
+<a-entity geometry="primitive: box; depth: 18; height: 0.5; width: 30" position="0 -0.5 2" material="shader: flat; 
+src: url(images/floor2.jpg); repeat: 15 10"></a-entity>
+<a-entity geometry="primitive: box; depth: 18; height: 0.5; width: 30" position="0 -0.5 20" material="shader: flat; 
+src: url(images/floor2.jpg); repeat: 15 10"></a-entity>
+<!-- Ceiling -->
+<a-entity geometry="primitive: box; depth: 18; height: 0.5; width: 30" position="0 7.5 2" material="shader: flat;  metalness: 0.8;
+src: url(images/wood1.jpg); repeat: 4 10"></a-entity>
+<a-entity geometry="primitive: box; depth: 18; height: 0.5; width: 30" position="0 7.5 20" material="shader: flat;  metalness: 0.8;
+src: url(images/wood1.jpg); repeat: 4 10"></a-entity>
+
+<!-- Wall Front -->
+<a-entity geometry="primitive: box; depth: 0.2; height: 7.5; width: 30" position="0 3.5 -6.5" material="shader: standard; side: double; src: url(images/wall.gif); repeat: 200 50"></a-entity>
+<a-entity geometry="primitive: box; depth: 0.2; height: 7.5; width: 14" position="0 3.5 11.1" material="shader: standard; side: double; src: url(images/wall.gif); repeat: 200 50"></a-entity>
+
+<!-- Wall Left -->
+<a-entity geometry="primitive: box; depth: 0.2; height: 7.5; width: 18" position="15 3.5 20" rotation="0 90 0" material="shader: standard; side: double; src: url(images/wall.gif); repeat: 100 50"></a-entity>
+<a-entity geometry="primitive: box; depth: 0.2; height: 2.7; width: 17.4" position="-15 6.1 2.1" rotation="0 90 0" material="shader: standard; side: double; src: url(images/wall.gif); repeat: 100 20"></a-entity>
+<a-entity geometry="primitive: box; depth: 0.2; height: 5; width: 1.8" position="-15 2.3 -5.5" rotation="0 90 0" material="shader: standard; side: double; src: url(images/wall.gif); repeat: 20 30"></a-entity>
+<a-entity geometry="primitive: box; depth: 0.2; height: 5; width: 1.8" position="-15 2.3 10.0" rotation="0 90 0" material="shader: standard; side: double; src: url(images/wall.gif); repeat: 20 30"></a-entity>
+
+<!-- Wall Right -->
+<a-entity geometry="primitive: box; depth: 0.2; height: 7.5; width: 18" position="-15 3.5 20" rotation="0 90 0" material="shader: standard; side: double; src: url(images/wall.gif); repeat: 100 50"></a-entity>
+<a-entity geometry="primitive: box; depth: 0.2; height: 2.7; width: 17.4" position="15 6.1 2.1" rotation="0 90 0" material="shader: standard; side: double; src: url(images/wall.gif); repeat: 100 20"></a-entity>
+<a-entity geometry="primitive: box; depth: 0.2; height: 5; width: 1.8" position="15 2.3 -5.5" rotation="0 90 0" material="shader: standard; side: double; src: url(images/wall.gif); repeat: 20 30"></a-entity>
+<a-entity geometry="primitive: box; depth: 0.2; height: 5; width: 1.8" position="15 2.3 10.0" rotation="0 90 0" material="shader: standard; side: double; src: url(images/wall.gif); repeat: 20 30"></a-entity>
+
+ <a-entity geometry="primitive: plane; height: 5; width: 14" position="-14.89 2.3 2.3" rotation="0 90 0"  material="shader: flat; side: double; transparent: true; 
+src: url(images/doors.png)"></a-entity>
+ <a-entity geometry="primitive: plane; height: 5; width: 14" position="14.89 2.3 2.3" rotation="0 90 0"  material="shader: flat; side: double; transparent: true; 
+src: url(images/doors.png)"></a-entity>
+
+<!-- Beams -->
+<a-entity geometry="primitive: box; depth: 0.3; height: 0.4; width: 30" position="0 7.3 -6.3" material="shader: flat; 
+src: url(images/wood1.jpg); repeat: 2 1"></a-entity>
+<a-entity geometry="primitive: box; depth: 0.3; height: 0.4; width: 5" position="12.2 3.3 -6.3" material="shader: flat; 
+src: url(images/wood1.jpg); repeat: 2 1"></a-entity>
+<a-entity geometry="primitive: box; depth: 0.3; height: 0.4; width: 5" position="-12.2 3.3 -6.3" material="shader: flat; 
+src: url(images/wood1.jpg); repeat: 2 1"></a-entity>
+<a-entity geometry="primitive: box; depth: 0.3; height: 0.4; width: 30" position="0 -0.35 -6.3" material="shader: flat; 
+src: url(images/wood1.jpg); repeat: 2 1"></a-entity>
+<a-entity geometry="primitive: box; depth: 0.3; height: 0.4; width: 14" position="0 -0.35 10.9" material="shader: flat; 
+src: url(images/wood1.jpg); repeat: 2 1"></a-entity>
+<a-entity geometry="primitive: box; depth: 0.3; height: 0.4; width: 18" position="14.8 -0.3 2.1" rotation="0 90 0" material="shader: flat; 
+src: url(images/wood1.jpg); repeat: 2 1"></a-entity>
+<a-entity geometry="primitive: box; depth: 0.3; height: 0.4; width: 18" position="14.8 -0.3 20.1" rotation="0 90 0" material="shader: flat; 
+src: url(images/wood1.jpg); repeat: 2 1"></a-entity>
+<!-- Beams Left -->
+<a-entity geometry="primitive: box; depth: 0.3; height: 0.4; width: 18" position="-14.8 -0.3 2.1" rotation="0 90 0" material="shader: flat; 
+src: url(images/wood1.jpg); repeat: 2 1"></a-entity>
+<a-entity geometry="primitive: box; depth: 0.3; height: 0.4; width: 14.4" position="-14.8 4.8 2.35" rotation="0 90 0" material="shader: flat; 
+src: url(images/wood1.jpg); repeat: 2 1"></a-entity>
+<!-- Beams Right -->
+<a-entity geometry="primitive: box; depth: 0.3; height: 0.4; width: 18" position="14.8 -0.3 2.1" rotation="0 90 0" material="shader: flat; 
+src: url(images/wood1.jpg); repeat: 2 1"></a-entity>
+<a-entity geometry="primitive: box; depth: 0.3; height: 0.4; width: 14.4" position="14.8 4.8 2.35" rotation="0 90 0" material="shader: flat; 
+src: url(images/wood1.jpg); repeat: 2 1"></a-entity>
+<!-- Beams Front -->
+<a-entity geometry="primitive: box; depth: 0.5; height: 7.5; width: 0.5" position="-14.7 3.5 -6.3" material="shader: flat; 
+src: url(images/wood1.jpg); repeat: 2 1"></a-entity>
+<a-entity geometry="primitive: box; depth: 0.5; height: 7.5; width: 0.5" position="14.7 3.5 -6.3" material="shader: flat; 
+src: url(images/wood1.jpg); repeat: 2 1"></a-entity>
+<a-entity geometry="primitive: box; depth: 0.5; height: 7.5; width: 0.5" position="-14.7 3.5 10.9" material="shader: flat; 
+src: url(images/wood1.jpg); repeat: 2 1"></a-entity>
+<a-entity geometry="primitive: box; depth: 0.5; height: 7.5; width: 0.5" position="14.7 3.5 10.9" material="shader: flat; 
+src: url(images/wood1.jpg); repeat: 2 1"></a-entity>
+<!-- Beams Back -->
+<a-entity geometry="primitive: box; depth: 0.5; height: 7.5; width: 0.5" position="6.9 3.5 10.9" material="shader: flat; 
+src: url(images/wood1.jpg); repeat: 2 1"></a-entity>
+<a-entity geometry="primitive: box; depth: 0.5; height: 7.5; width: 0.5" position="-6.9 3.5 10.9" material="shader: flat; 
+src: url(images/wood1.jpg); repeat: 2 1"></a-entity>
+
+<!-- TV -->
+<a-entity geometry="primitive: box; depth: 0.15; height: 5.3; width: 9.3" position="0 2.8 -5.6" rotation="0 0 0"  material="shader: flat; metalness: 1.5; color: #0b0806;"></a-entity>
+<!-- TV Top -->
+<a-entity geometry="primitive: box; depth: 0.1; height: 0.7; width: 12" position="0 6.1 -5.7" material="shader: flat; 
+src: url(images/wood1.jpg); repeat: 2 1"></a-entity>
+<a-entity geometry="primitive: box; depth: 1; height: 0.2; width: 12.2" position="0 6.3 -6" material="shader: flat; 
+src: url(images/wood1.jpg); repeat: 7 1"></a-entity>
+<a-entity geometry="primitive: box; depth: 1; height: 0.2; width: 12.2" position="0 5.6 -6" material="shader: flat; 
+src: url(images/wood1.jpg); repeat: 7 1"></a-entity>
+<!-- TV Sides -->
+<a-entity geometry="primitive: box; depth: 1; height: 6; width: 1.1" position="5.2 2.5 -6"  rotation="0 0 0"  material="shader: flat; 
+src: url(images/wood2.jpg); repeat: 1 2;"></a-entity>
+<a-entity geometry="primitive: box; depth: 1; height: 6; width: 1.1" position="-5.2 2.5 -6"  rotation="0 0 0"  material="shader: flat; 
+src: url(images/wood2.jpg); repeat: 1 2;"></a-entity>
+<!-- TV Bottom -->
+<a-entity geometry="primitive: box; depth: 1; height: 0.8; width: 12" position="0 -0.3 -5.9" material="shader: flat; 
+src: url(images/wood1.jpg); repeat: 2 1"></a-entity>
+<!-- Shelf Left -->
+<a-entity geometry="primitive: box; depth: 1; height: 0.2; width: 4.2" position="-7.7 5.6 -6" material="shader: flat; 
+src: url(images/wood1.jpg); repeat: 2 1"></a-entity>
+<a-entity geometry="primitive: box; depth: 1; height: 0.2; width: 4" position="-7.7 3.7 -6" material="shader: flat; 
+src: url(images/wood1.jpg); repeat: 2 1"></a-entity>
+<a-entity geometry="primitive: box; depth: 1; height: 0.2; width: 4" position="-7.7 1.8 -6" material="shader: flat; 
+src: url(images/wood1.jpg); repeat: 2 1"></a-entity>
+<a-entity geometry="primitive: box; depth: 0.1; height: 6; width: 4" position="-7.7 2.7 -6.35" material="shader: flat; 
+color: #080302"></a-entity>
+<a-entity geometry="primitive: box; depth: 1; height: 0.2; width: 4.2" position="-7.7 -0.2 -6" material="shader: flat; 
+src: url(images/wood1.jpg); repeat: 2 1"></a-entity>
+<a-entity geometry="primitive: box; depth: 0.1; height: 6; width: 1" position="-9.7 2.7 -6" rotation="0 90 0 " material="shader: flat; 
+src: url(images/wood1.jpg); repeat: 2 1"></a-entity>
+<!-- Shelf Right -->
+<a-entity geometry="primitive: box; depth: 1; height: 0.2; width: 4.2" position="7.7 5.6 -6" material="shader: flat; 
+src: url(images/wood1.jpg); repeat: 2 1"></a-entity>
+<a-entity geometry="primitive: box; depth: 1; height: 0.2; width: 4" position="7.7 3.7 -6" material="shader: flat; 
+src: url(images/wood1.jpg); repeat: 2 1"></a-entity>
+<a-entity geometry="primitive: box; depth: 1; height: 0.2; width: 4" position="7.7 1.8 -6" material="shader: flat; 
+src: url(images/wood1.jpg); repeat: 2 1"></a-entity>
+<a-entity geometry="primitive: box; depth: 0.1; height: 6; width: 4" position="7.7 2.7 -6.35" material="shader: flat; 
+color: #080302"></a-entity>
+<a-entity geometry="primitive: box; depth: 1; height: 0.2; width: 4.2" position="7.7 -0.2 -6" material="shader: flat; 
+src: url(images/wood1.jpg); repeat: 2 1"></a-entity>
+<a-entity geometry="primitive: box; depth: 0.1; height: 6; width: 1" position="9.7 2.7 -6" rotation="0 90 0 " material="shader: flat; 
+src: url(images/wood1.jpg); repeat: 2 1"></a-entity>
+
+
+<a-video src="videos/alien.mp4" autoplay="true" width="9" height="5" position="0 2.8 -5.519"></a-video>
+<a-model src="models/sofa.dae" scale="1 1 1" position="0 0 4.3" rotation="0 90 0"></a-model>
+
+<!-- Shelf Items -->
+<a-entity geometry="primitive: plane; height: 0.9; width: 3" position="7.5 0.42 -5.99" rotation="0 0 0"  material="shader: flat; transparent: true; 
+ src: url(images/books.png)"></a-entity>
+<a-entity geometry="primitive: plane; height: 0.6; width: 1.1" position="8.2 2.2 -5.99" rotation="0 0 0"  material="shader: flat; transparent: true; 
+ src: url(images/oculus.png)"></a-entity>
+<a-entity geometry="primitive: plane; height: 0.9; width: 0.7" position="6.8 2.33 -5.99" rotation="0 0 0"  material="shader: flat; transparent: true; 
+ src: url(images/oculus-stand.png)"></a-entity>
+ <a-entity geometry="primitive: plane; height: 1.5; width: 0.9" position="7.6 4.6 -5.99" rotation="0 0 0"  material="shader: flat; transparent: true; 
+ src: url(images/robot.png)"></a-entity>
+ <a-entity geometry="primitive: plane; height: 1.3; width: 1.3" position="-7.6 4.5 -5.99" rotation="0 0 0"  material="shader: flat; transparent: true; 
+ src: url(images/alien.png)"></a-entity>
+<a-entity geometry="primitive: plane; height: 0.7; width: 0.9" position="-8.4 2.25 -5.99" rotation="0 0 0"  material="shader: flat; transparent: true; 
+ src: url(images/psvr.png)"></a-entity>
+ <a-entity geometry="primitive: plane; height: 0.24; width: 1" position="-6.8 1.94 -5.99" rotation="0 0 0"  material="shader: flat; transparent: true; 
+ src: url(images/ps-move.png)"></a-entity>
+<a-entity geometry="primitive: plane; height: 0.4; width: 1.8" position="-7.7 0.10 -5.99" rotation="0 0 0"  material="shader: flat; transparent: true; 
+ src: url(images/ps4.png)"></a-entity>
+
+<!-- Wainscoting Front -->
+<a-entity geometry="primitive: box; depth: 0.1; height: 4; width: 5" position="-12.2 1.5 -6.4" rotation="0 0 0 " material="shader: flat; 
+src: url(images/wood1.jpg); repeat: 4 2"></a-entity>
+<a-entity geometry="primitive: box; depth: 0.1; height: 4; width: 5" position="12.2 1.5 -6.4" rotation="0 0 0 " material="shader: flat; 
+src: url(images/wood1.jpg); repeat: 4 2"></a-entity>
+<!-- Wainscoting Left -->
+<a-entity geometry="primitive: box; depth: 0.1; height: 4; width: 1.4" position="-14.9 1.5 -5.4" rotation="0 90 0 " material="shader: flat; 
+src: url(images/wood1.jpg); repeat: 1 2"></a-entity>
+<a-entity geometry="primitive: box; depth: 0.1; height: 4; width: 1.4" position="-14.9 1.5 9.95" rotation="0 90 0 " material="shader: flat; 
+src: url(images/wood1.jpg); repeat: 1 2"></a-entity>
+<!-- Wainscoting Right -->
+<a-entity geometry="primitive: box; depth: 0.1; height: 4; width: 1.4" position="14.9 1.5 -5.4" rotation="0 90 0 " material="shader: flat; 
+src: url(images/wood1.jpg); repeat: 1 2"></a-entity>
+<a-entity geometry="primitive: box; depth: 0.1; height: 4; width: 1.4" position="14.9 1.5 9.95" rotation="0 90 0 " material="shader: flat; 
+src: url(images/wood1.jpg); repeat: 1 2"></a-entity>
+
+<a-entity geometry="primitive: box; depth: 0.1; height: 4; width: 18" position="14.9 1.5 20" rotation="0 90 0 " material="shader: flat; 
+src: url(images/wood1.jpg); repeat: 10 2"></a-entity>
+<a-entity geometry="primitive: box; depth: 0.1; height: 4; width: 18" position="-14.9 1.5 20" rotation="0 90 0 " material="shader: flat; 
+src: url(images/wood1.jpg); repeat: 10 2"></a-entity>
+
+<!-- Carpet -->
+<a-entity geometry="primitive: plane; height: 6; width: 12" position="0 -0.2 2" rotation="-90 0 0"  material="shader: flat; transparent: true; src: url(images/carpet.png)"></a-entity>
+
+<!-- Art Table -->
+<a-entity geometry="primitive: box; depth: 1.3; height: 1.3; width: 6" position="0 0.96 10.1" rotation="0 0 0 " material="shader: flat; 
+src: url(images/wood1.jpg); repeat: 5 1"></a-entity>
+<a-entity geometry="primitive: box; depth: 1.6; height: 0.1; width: 6.3" position="0 1.6 10.1" rotation="0 0 0 " material="shader: flat; 
+src: url(images/wood1.jpg); repeat: 1 3"></a-entity>
+<a-entity geometry="primitive: box; depth: 0.2; height: 2; width: 0.2" position="2.95 0.6 9.5" rotation="0 0 0 " material="shader: flat; 
+src: url(images/wood1.jpg); repeat: 1 2"></a-entity>
+<a-entity geometry="primitive: box; depth: 0.2; height: 2; width: 0.2" position="2.95 0.6 10.7" rotation="0 0 0 " material="shader: flat; 
+src: url(images/wood1.jpg); repeat: 1 2"></a-entity>
+<a-entity geometry="primitive: box; depth: 0.2; height: 2; width: 0.2" position="-2.95 0.6 9.5" rotation="0 0 0 " material="shader: flat; 
+src: url(images/wood1.jpg); repeat: 1 2"></a-entity>
+<a-entity geometry="primitive: box; depth: 0.2; height: 2; width: 0.2" position="-2.95 0.6 10.7" rotation="0 0 0 " material="shader: flat; 
+src: url(images/wood1.jpg); repeat: 1 2"></a-entity>
+
+<!-- Art -->
+<a-entity geometry="primitive: plane; height: 4; width: 8" position="0 4.5 10.99" rotation="0 180 0"  material="shader: flat; transparent: true; 
+ src: url(images/art.png)"></a-entity>
+<a-entity geometry="primitive: plane; height: 2.5; width: 2.8" position="14.89 5.3 15" rotation="0 -90 0"  material="shader: flat; 
+ src: url(images/van-gogh.jpg)"></a-entity>
+<a-entity geometry="primitive: plane; height: 2.5; width: 3" position="-14.89 5.3 15" rotation="0 90 0"  material="shader: flat; 
+ src: url(images/van-gogh2.jpg)"></a-entity>
+
+<!-- Lights -->
+<a-entity geometry="primitive: plane; height: 2; width: 2" position="-8 6.8 2.5" rotation="90 0 0"  material="shader: flat; transparent: true; 
+ src: url(images/ceiling-light.png)"></a-entity>
+ <a-entity geometry="primitive: plane; height: 2; width: 2" position="8 6.8 2.5" rotation="90 0 0"  material="shader: flat; transparent: true; 
+ src: url(images/ceiling-light.png)"></a-entity>
+
+<!-- Camera -->
+ <a-entity camera gamepad-controls look-controls position="0 2 4" cursor-visible="enabled: false" wasd-controls="enabled: false">
+</a-entity>
+ 
+      <!-- Lighting and background -->
+    </a-scene>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-56782327-23', 'auto');
+  ga('send', 'pageview');
+
+</script>
+ </body>
+</html>
